@@ -1,0 +1,27 @@
+
+namespace fsi.zone.bps.transactions
+import fsi.zone.bps.developer.*
+
+transaction fundWastePlan {
+  
+  o String id
+  o String username // Company username that is being funded
+  o String amount // amount that is being funded
+ 
+  o String action // deposit or withdraw
+  o String description  // description for this particular transaction
+ 
+  //o String oldBalance optional // balance of the funded company before this transaction
+  o String newBalance  // new balance after the funding
+ 
+  o String createdBy   // the account performing the action
+  o String createdDate  // date and time of transaction
+}
+
+event fundWastePlanEvent{
+  
+  o String description
+  o String oldBalance
+  o String newBalance
+  -->DeveloperProfile profile
+}

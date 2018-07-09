@@ -1,0 +1,59 @@
+
+/**
+ * Write your model definitions here
+ */
+
+//namespace fsi.zone.bps
+namespace fsi.zone.bps
+
+participant Cardholder identified by id {
+ 
+  // Basic house keeing information - REQUIRED
+  o String id
+  o String traceId optional
+  o String newCardholderId optional
+  o String cardId
+  o String cardType
+  
+  // User information
+  o String title
+  o String firstName
+  o String surname
+  o String initials
+  o String msisdn
+  o String dateOfBirth // Duplicated because of formatting issues in Java Calander API
+  o String dob optional // Left intentinally
+  o String phone optional
+  o String email optional
+  o String employeeId optional
+  o String ficaIndicator
+  
+  // South African Identity Information
+  o String govid optional
+  o String govidType // SAI or PSS for South African ID or PSS for Passport
+  o String languageIndicator
+
+  // Passport Information
+  o String passExpDate optional
+  o String passport optional
+  o String passportExpDate optional
+
+  // Residential Address Information
+  o String resAddress
+  o String resCity
+  o String resPostalCode
+  o String resProvince
+  o String resSuburb
+ 
+  // Delivery Address Information
+  o String delAddress
+  o String delCity
+  o String delPostalCode
+  o String delProvince
+  o String delSuburb
+
+  // Meta Data
+  o String createdBy optional
+  o String createdDate optional
+  o String updatedOn optional 
+}

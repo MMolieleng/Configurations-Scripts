@@ -1,0 +1,20 @@
+
+namespace fsi.zone.bps.developer
+
+/*
+participant DeveloperAccount identified by id {
+  o String id
+  o String company
+  o String password
+  o String username
+  o Boolean active
+}*/
+
+participant DeveloperProfile identified by id {
+  o String id
+  o String apiKey
+  o String company
+  o String username
+  o String balance
+  o String createdDate
+}
