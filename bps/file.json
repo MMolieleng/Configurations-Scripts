@@ -1,0 +1,37 @@
+{
+  "engines": {
+    "composer": "^0.19.8"
+  },
+  "name": "bps",
+  "version":"0.1.81",
+  "description": "Blockchain Payment Solutions",
+  "scripts": {
+    "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/bps.bna",
+    "pretest": "npm run lint",
+    "lint": "eslint .",
+    "test": "nyc mocha -t 0 test/*.js && cucumber-js"
+  },
+  "keywords": [
+    "composer",
+    "composer-network"
+  ],
+  "author": "mohale molieleng",
+  "email": "mohalem@qode.healthcare",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "latest",
+    "chai-as-promised": "latest",
+    "composer-admin": "^0.19.11",
+    "composer-cli": "^0.19.11",
+    "composer-client": "^0.19.11",
+    "composer-common": "^0.19.11",
+    "composer-connector-embedded": "^0.19.11",
+    "composer-cucumber-steps": "^0.19.11",
+    "cucumber": "^2.2.0",
+    "eslint": "^5.0.1",
+    "mkdirp": "latest",
+    "mocha": "latest",
+    "npm-version-up": "^0.1.5",
+    "nyc": "latest"
+  }
+}

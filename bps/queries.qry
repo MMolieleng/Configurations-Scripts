@@ -1,0 +1,9 @@
+/** Get Developer BAsed on their username 
+  *
+  */
+  query getDeveloperProfileByUsername{
+    description:"Select DeveloperProfile by username"
+    statement:
+      SELECT fsi.zone.bps.developer.DeveloperProfile
+        WHERE (username == _$username)
+  }
